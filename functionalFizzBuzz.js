@@ -6,9 +6,10 @@ const printPretty = (a) =>{
     }
 }
 
-let array = _.range(1, 50)
+let array = _.range(1, 51)
 array = _.map(array, a => {if(a%15 == 0){return a + " :FizzBuzz"} else return a})
 array = _.map(array, a => {if(a%3 == 0){return a + " :Fizz"} else return a})
 array = _.map(array, a => {if(a%5 == 0){return a + " :Buzz"} else return a})
+array = _.filter(array, a => typeof a !== 'number')
 
 printPretty(array)
